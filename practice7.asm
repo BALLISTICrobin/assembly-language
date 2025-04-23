@@ -40,18 +40,18 @@ main proc
 
 
        mov ah,9
-       lea dx,c
+       lea dx,d
        int 21h
 
        
-       add bl,bh
+       sub bh,bl
        
 
-       sub bl,48      ;convert ascii to decimal
+       add bh,48      ;convert ascii to decimal
       
 
        mov ah,2
-       mov dl,bl
+       mov dl,bh
        int 21h
   exit:
        mov ah, 4ch
